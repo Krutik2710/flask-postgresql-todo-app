@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="mb-4 text-center">
+
+    Todo Application
+
+</h2>
+
+<form action="/add" method="POST" class="d-flex mb-4">
+
+    <input
+        type="text"
+        class="form-control"
+        name="title"
+        placeholder="Enter a task"
+        required>
+
+    <button class="btn btn-primary ms-2">
+
+        Add
+
+    </button>
+
+</form>
+
+
+<table class="table table-bordered">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Task</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for todo in todos %}
+
+<tr>
+
+<td>{{ todo.id }}</td>
+
+<td>
+
+{% if todo.completed %}
+
+<s>{{ todo.title }}</s>
+
+{% else %}
+
+{{ todo.title }}
+
+{% endif %}
+
+</td>
+
+<td>
+
+{% if todo.completed %}
+
+Completed
+
+{% else %}
+
+Pending
+
+{% endif %}
+
+</td>
+
+<td>
+
+<a href="/complete/{{todo.id}}" class="btn btn-success btn-sm">
+
+Toggle
+
+</a>
+
+<a href="/delete/{{todo.id}}" class="btn btn-danger btn-sm">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}
