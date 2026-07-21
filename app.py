@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from config import Config
 from models import db, Todo
+from flask import jsonify
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -40,6 +41,13 @@ def delete(id):
     db.session.delete(todo)
     db.session.commit()
     return redirect("/")
+
+@app.route("/health")
+def health():
+    return jsonify({
+        "status": "healthy"
+    }), 200
+
 
 
 if __name__ == "__main__":
