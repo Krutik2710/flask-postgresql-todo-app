@@ -49,15 +49,14 @@ spec:
           timeoutSeconds: 2
           failureThreshold: 3
 
-          readinessProbe:
-            httpGet:
-              path: /health
-              port: 8000
-
-            initialDelaySeconds: 5
-            periodSeconds: 5
-            timeoutSeconds: 2
-            failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 2
+          failureThreshold: 3
 
         resources:
           requests:
