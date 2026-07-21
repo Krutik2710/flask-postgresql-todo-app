@@ -1,0 +1,35 @@
+apiVersion: batch/v1
+kind: Job
+
+metadata:
+  name: initdb
+  namespace: todo-app
+
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+
+      containers:
+      - name: initdb
+
+        image: krutik2710/flask-postgresql-todo-app:latest
+
+        imagePullPolicy: Always
+
+        command:
+        - python
+        - init_db.py
+
+        envFrom:
+        - secretRef:
+            name: postgres-secret
+
+        env:
+        - name: POSTGRES_HOST
+          value: postgres
+
+        - name: POSTGRES_PORT
+          value: "5432"
+
+  backoffLimit: 3
