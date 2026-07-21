@@ -7,29 +7,20 @@ app.config.from_object(Config)
 
 db.init_app(app)
 
-with app.app_context():
-    db.create_all()
-
 
 @app.route("/")
 def index():
-
     todos = Todo.query.order_by(Todo.created_at.desc()).all()
-
     return render_template("index.html", todos=todos)
 
 
 @app.route("/add", methods=["POST"])
 def add():
-
     title = request.form.get("title")
 
     if title:
-
         todo = Todo(title=title)
-
         db.session.add(todo)
-
         db.session.commit()
 
     return redirect("/")
@@ -37,25 +28,17 @@ def add():
 
 @app.route("/complete/<int:id>")
 def complete(id):
-
     todo = Todo.query.get_or_404(id)
-
     todo.completed = not todo.completed
-
     db.session.commit()
-
     return redirect("/")
 
 
 @app.route("/delete/<int:id>")
 def delete(id):
-
     todo = Todo.query.get_or_404(id)
-
     db.session.delete(todo)
-
     db.session.commit()
-
     return redirect("/")
 
 
