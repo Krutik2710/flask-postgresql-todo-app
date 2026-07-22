@@ -26,32 +26,7 @@ The final architecture includes:
 
 # 🏗️ Architecture
 
-```text
-                        Developer
-                            │
-                     git push (main)
-                            │
-                            ▼
-                  GitHub Repository
-                            │
-        ┌───────────────────┴───────────────────┐
-        │                                       │
-        ▼                                       ▼
- GitHub Actions (CI)                      ArgoCD (CD)
-        │                                       │
- Build Docker Image                     Watches Git Repository
-        │                                       │
- Push Image to Docker Hub              Detects Manifest Changes
-        │                                       │
- Update Deployment Manifest                   Sync
-        │                                       │
- Commit Updated Manifest                       ▼
-        └──────────────► Amazon EKS ◄───────────┘
-                              │
-                 Kubernetes Rolling Update
-                              │
-                Flask + PostgreSQL Application
-```
+<img width="4096" height="2731" alt="57500" src="https://github.com/user-attachments/assets/e5bcfb44-b5c3-4460-a605-4234173507fe" />
 
 ---
 
