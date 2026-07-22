@@ -279,8 +279,6 @@ Rolling Deployment
 
 # 📷 Screenshots
 
-Add screenshots here:
-
 - Flask Application
   <img width="1640" height="896" alt="Flask App" src="https://github.com/user-attachments/assets/97294c81-42cd-4144-af02-bad46a661bc7" />
 
