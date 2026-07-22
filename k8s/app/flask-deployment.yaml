@@ -21,7 +21,7 @@ spec:
       containers:
       - name: flask-app
 
-        image: krutik2710/flask-postgresql-todo-app:v007
+        image: krutik2710/flask-postgresql-todo-app:v008
 
         imagePullPolicy: Always
 
