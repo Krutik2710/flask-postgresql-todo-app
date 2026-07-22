@@ -282,11 +282,16 @@ Rolling Deployment
 Add screenshots here:
 
 - Flask Application
+  <img width="936" height="595" alt="Screenshot 2026-07-21 164811" src="https://github.com/user-attachments/assets/abc4622d-606e-4db9-8bac-58ab113cf0dc" />
+
 - GitHub Actions Workflow
+  <img width="1918" height="893" alt="Screenshot 2026-07-22 001057" src="https://github.com/user-attachments/assets/8bdc87f1-672f-41f8-93e1-c147ea672225" />
+
 - Docker Hub Image Tags
+  <img width="889" height="440" alt="image" src="https://github.com/user-attachments/assets/8267c69f-7d51-45c1-b749-caf6c9328387" />
+
 - ArgoCD Dashboard
-- AWS Load Balancer
-- EKS Pods
+  <img width="1919" height="988" alt="Screenshot 2026-07-22 001044" src="https://github.com/user-attachments/assets/d39e6e51-9655-4645-b564-6860a9a57166" />
 
 ---
 
