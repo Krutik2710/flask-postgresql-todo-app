@@ -282,7 +282,7 @@ Rolling Deployment
 Add screenshots here:
 
 - Flask Application
-  <img width="936" height="595" alt="Screenshot 2026-07-21 164811" src="https://github.com/user-attachments/assets/abc4622d-606e-4db9-8bac-58ab113cf0dc" />
+  <img width="1640" height="896" alt="Flask App" src="https://github.com/user-attachments/assets/97294c81-42cd-4144-af02-bad46a661bc7" />
 
 - GitHub Actions Workflow
   <img width="1918" height="893" alt="Screenshot 2026-07-22 001057" src="https://github.com/user-attachments/assets/8bdc87f1-672f-41f8-93e1-c147ea672225" />
